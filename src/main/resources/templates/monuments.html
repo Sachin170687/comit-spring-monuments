@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" xmln:th="http://www.thymeleaf.org">
+	<style>
+		.bg1{
+		background-color:cyan;
+		}
+		.bg2{
+		background-color:yellow;
+		}
+	</style>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  
+</head>
+
+<body>
+	<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<ul class="navbar-brand">Monument Site</ul>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a href="http://localhost:8080/#"><span class="glyphicon glyphicon-home"></span></a></li>
+					<li><a href="http://localhost:8080/monuments_list">Monuments</a></li>
+					<li><a href="http://localhost:8080/bookings">Book Tickets</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><img th:src="@{/img/comit.png}"></li>
+					
+				</ul>
+			</div>
+		</nav>	
+		<div class="container">
+			<h1>List Of Monumnets</h1>
+			<h2>1. Taj Mahal</h2>
+			<br><br>
+			<div class="row">
+				<div class="col-lg-6 bg1"><img th:src="@{/img/tajmahal.jpg}"></div>
+				<div class="col-lg-6 bg2">
+				    The Taj Mahal stands as the pinnacle among the nation's monuments. Erected
+					in the 17th century, it serves as the epitome of regal elegance and 
+					architectural marvel. Fashioned from marble, this majestic mausoleum 
+					dedicated to Mumtaz Mahal is adorned with delicate lattice work and 
+					embellished with semi-precious stones sourced from various corners of 
+					the globe. Each year, millions of visitors flock to witness the splendor 
+					of this monument, and it is highly recommended that you too experience its
+					beauty firsthand.
+				</div>
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+           <h2>2. Agra Fort</h2>
+			<br><br>
+			<div class="row">
+				<div class="col-lg-6 bg1"><img th:src="@{/img/agra_fort.jpg}"></div>
+				<div class="col-lg-6 bg2">
+				    Adjacent to the Taj Mahal, the city's primary allure is the Agra Fort, 
+				    once the epicenter of Mughal rule. While the fort traces its origins back 
+				    several centuries, it gained prominence as a formidable defense 
+				    structure following Akbar's reconstruction using sandstone. Shah Jahan 
+				    further enhanced the fort's grandeur by incorporating numerous marble 
+				    edifices. Encompassing a sprawling 94 acres, this heritage site boasts 
+				    notable attractions within its walls, including Khas Mahal, Diwan-i-khas,
+				    Nagina Masjid, Diwan-i-aam, Musamman Burj, Shahi Burj, Sheesh Mahal, and
+				    others.
+				 </div>
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            	
+           <h2>3. Fatehpur Sikhri</h2>
+			<br><br>
+			<div class="row">
+				<div class="col-lg-6 bg1"><img th:src="@{/img/fatehpur_sikri.jpg}"></div>
+				<div class="col-lg-6 bg2">
+				Situated a short distance from Agra, this expansive city was established in 
+				the 16th century by Akbar as a capital. It showcases meticulous architectural 
+				splendor, featuring a myriad of structures such as palaces, mosques, and 
+				halls. However, due to water scarcity issues, Akbar abandoned the city within 
+				a decade.
+
+                Today, Fatehpur Sikri stands as a prominent attraction, celebrated for its 
+                architectural wonders like Jama Masjid, Diwan-i-Aam, Diwan-i-Khas, Buland 
+                Darwaza, Mariam uz Zamani, Anup Talao, Ibadat Khana, Pachisi court, Hiran 
+                Minar, and others.
+				</div>    
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+           		
+            	
+           <h2>4. Baby Taj or Itimad-ud-daula</h2>
+			<br><br>
+			<div class="row">
+				<div class="col-lg-6 bg1"><img th:src="@{/img/itmad.jpg}"></div>
+				<div class="col-lg-6 bg2">
+				The Itimad-Ud-Daulah is the inspiration behind the Taj Mahal, constructed in 
+				the 17th century with a combination of sandstone and marble. Dedicated to 
+				Nur Jahan's father, this tomb is renowned for its intricate wall designs. 
+				Notably, it features an array of semi-precious stones such as jasper, topaz,
+				lapis, onyx, and more. When envisioning the Taj Mahal, Shah Jahan aspired to
+				create a structure surpassing the grandeur of this mausoleum dedicated to his
+				grandfather.				</div>    
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  
+			<h2>5. Tomb Of Akbar</h2>
+			<br><br>
+			<div class="row">
+				<div class="col-lg-6 bg1"><img th:src="@{/img/akbar_tomb.jpg}"></div>
+				<div class="col-lg-6 bg2">
+				Situated a short distance from Agra, this expansive city was established in 
+				the 16th century by Akbar as a capital. It showcases meticulous architectural 
+				splendor, featuring a myriad of structures such as palaces, mosques, and 
+				halls. However, due to water scarcity issues, Akbar abandoned the city within 
+				a decade.
+
+                Today, Fatehpur Sikri stands as a prominent attraction, celebrated for its 
+                architectural wonders like Jama Masjid, Diwan-i-Aam, Diwan-i-Khas, Buland 
+                Darwaza, Mariam uz Zamani, Anup Talao, Ibadat Khana, Pachisi court, Hiran 
+                Minar, and others.
+				</div>    
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+	    </div>
+
+</body>
+</html>

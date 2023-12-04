@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  
+</head>
+<body>
+	<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<ul class="navbar-brand">Monument Site</ul>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a href="http://localhost:8080/#"><span class="glyphicon glyphicon-home"></span></a></li>
+					<li><a href="http://localhost:8080/monuments_list">Monuments</a></li>
+					<li><a href="#">Book Tickets</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><img th:src="@{/img/comit.png}"></li>
+					
+				</ul>
+			</div>
+		</nav>	
+		
+		<div class="container">
+  <h3>Login</h3>
+  
+	<form role="form">
+  
+		<div class="form-group">
+			<label for="email">Email:</label>
+			<input type="email" class="form-control" id="email" placeholder="Enter email">  
+		</div>
+		
+		<div class="form-group">
+			<label for="pwd">Password:</label>
+			<input type="password" class="form-control" id="pwd" placeholder="Enter password">
+		</div>
+		
+		<div class="checkbox">        	
+			<label><input type="checkbox"> Remember me</label>
+		</div>
+		
+		
+		<button type="submit" class="btn btn-default">Submit</button>
+		<div class="register-link">
+			<p>Don't have an account?<a href="http://localhost:8080/register">Register</p>
+			
+		</div>
+		
+	
+	</form>
+  
+</div>
+
+
+
+</body>
+</html>
