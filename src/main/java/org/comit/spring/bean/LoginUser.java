@@ -2,24 +2,25 @@ package org.comit.spring.bean;
 
 public class LoginUser {
 	
-	String loginemail;
-	String loginpassword;
-	public String getLoginemail() {
-		return loginemail;
+	String email;
+	String password;
+	public String getEmail() {
+		return email;
 	}
-	public void setLoginemail(String loginemail) {
-		this.loginemail = loginemail;
+	public void setEmail(String email) {
+		this.email = email;
 	}
-	public String getLoginpassword() {
-		return loginpassword;
+	public String getPassword() {
+		return password;
 	}
-	public void setLoginpassword(String loginpassword) {
-		this.loginpassword = loginpassword;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	@Override
 	public String toString() {
-		return String.format("LoginUser [loginemail=%s, loginpassword=%s]", loginemail, loginpassword);
+		return String.format("LoginUser [email=%s, password=%s]", email, password);
 	}
+	
 	
 	
 

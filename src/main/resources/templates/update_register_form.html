@@ -27,12 +27,15 @@
 		</nav>	
 	
 <div class="container">
-  <h4>New User</h4>
+  <h4>Update User</h4>
 
-  <form role="form" th:action="@{/register}" th:object="${user}" method="post">
+  <form role="form" th:action="@{/update}" th:object="${user}" method="post">
   
 	<!-- Input Fields -->
     <div class="form-group">
+      <label for="firstName">User ID:</label>
+      <input type="text" class="form-control"  th:field="*{idUser}" readonly>
+    
       <label for="firstName">First Name:</label>
       <input type="text" class="form-control"  th:field="*{firstName}" required>
     
@@ -42,15 +45,12 @@
       <label for="email">Email</label>
       <input type="email" class="form-control" th:field="*{email}" required>
     
-   	  <label for="password">Password</label>
-      <input type="password" class="form-control" th:field="*{password}" required>
-    
-   	  
+   	    
    	  <label for="contactNumber">Contact Number</label>
       <input type="text" class="form-control" th:field="*{contactNumber}" required>
       <bt><br>
       <button type="submit" class="btn btn-default">
-		  Save</button>	
+		  Update</button>	
 		</div>
 		<p><a href="http://localhost:8080/login">Please Login</a></p>
 		

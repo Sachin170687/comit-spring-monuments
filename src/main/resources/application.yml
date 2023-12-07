@@ -3,9 +3,15 @@
 server:
   port: 8080
   
+# Logger
+logging.level:
+  web: DEBUG
+  '[org.comit.spring]': DEBUG
+
+  
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/Site
+    url: jdbc:mysql://localhost:3306/website_db
     username: root
     password: pass@123
   

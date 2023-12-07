@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<style>
+		.bg1{
+		background-color:cyan;
+		}
+		.bg2{
+		background-color:yellow;
+		}
+	</style>	
+	
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <title>Users System</title>
+</head>
+<body>
+  <div class="container mt-5 w-75">
+    <div class="jumbotron,p-3 mb-2 bg-default text-dark" >
+	<h1 class="text-center">User Details</h1>
+    <div class="table-responsive mt-3">
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Password</th>
+            <th scope="col">Contact Number</th>
+            <th scope="col">#</th>
+            <th scope="col">#</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="user: ${users}">
+            <td th:text="${user.idUser}"/>
+            <td th:text="${user.firstName} + ' ' + ${user.lastName}"/>
+            <td th:text="${user.email} "/>
+            <td th:text="${user.password}"/>
+            <td th:text="${user.contactNumber}"/>
+            <td><a th:href="@{/update/} + ${user.idUser}" class="btn btn-primary" role="button">Update</a></td>
+            <td><a th:href="@{/delete/} + ${user.idUser}" class="btn btn-danger" role="button">Delete</a></td>
+
+          </tr>
+        </tbody>
+      </table>
+
+  </div>
+
+  </div>
+   </div>
+</body>
+</html>

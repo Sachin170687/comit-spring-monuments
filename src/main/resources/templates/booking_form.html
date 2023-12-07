@@ -27,32 +27,36 @@
 		</nav>	
 	
 <div class="container">
-  <h4>New User</h4>
+  <h4>Book Ticket</h4>
 
-  <form role="form" th:action="@{/register}" th:object="${user}" method="post">
+  <form role="form" th:action="@{/booking}" th:object="${bookings}" method="post">
   
 	<!-- Input Fields -->
     <div class="form-group">
-      <label for="firstName">First Name:</label>
-      <input type="text" class="form-control"  th:field="*{firstName}" required>
-    
-	  <label for="lastName">Last Name:</label>
-      <input type="text" class="form-control" th:field="*{lastName}" required>
-      
-      <label for="email">Email</label>
-      <input type="email" class="form-control" th:field="*{email}" required>
-    
-   	  <label for="password">Password</label>
-      <input type="password" class="form-control" th:field="*{password}" required>
-    
-   	  
-   	  <label for="contactNumber">Contact Number</label>
-      <input type="text" class="form-control" th:field="*{contactNumber}" required>
-      <bt><br>
-      <button type="submit" class="btn btn-default">
-		  Save</button>	
-		</div>
-		<p><a href="http://localhost:8080/login">Please Login</a></p>
+      <label for="visitDate">Date Of Visit:</label>
+      <input type="date" class="form-control"  th:field="*{visitDate}" required>
+    <div class="form-group">
+	  <label for="ticketPrice">Monuments List:</label>
+	  <select class="form-control" th:field="*{ticketPrice}" required>
+		<option value="" selected>Select</option>
+		<option value="100">Taj Mahal</option>
+		<option value="80">Agra Fort</option>
+		<option value="70">Fatehpur Sikhri</option>
+		<option value="60">Itimad-ud-daula</option>
+		<option value="50">Tomb Of Akbar</option>
+	  </select>
+	</div>
+	  <label for="numberTickets">Number Of Tickets:</label>
+      <input type="text" class="form-control" th:field="*{numberTickets}" required>
+    <br>
+    <div>
+   	  <label for="totalPrice">Total Price</label>
+      <input type="text" class="form-control" th:field="*{totalPrice}" readonly>
+      </div>
+    <br>
+      <button type="submit" class="btn btn-primary">
+		  Calculate Total Price</button> 
+		
 		
 	
 	</div>
