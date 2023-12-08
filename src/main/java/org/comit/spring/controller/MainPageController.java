@@ -121,14 +121,19 @@ public class MainPageController {
 		return "booking_form";
 	}
 	
-	@PostMapping("booking")	
-	String calTotal(Bookings booking) {
+	@PostMapping("booking")
+	String createBooking(Bookings booking) {
 		System.out.println("14th Page");
-		BigDecimal totalPrice = booking.getTicketPrice().multiply(booking.getNumberTickets());
-		
+		BigDecimal totalPrice= booking.getTicketPrice().multiply(booking.getNumberTickets());
 		booking.setTotalPrice(totalPrice);
-		
-		return "booking_form";
+		this.bookingservice.createBooking(booking);
+		return "booking_form";	
+	}
+	
+	@GetMapping("payment")
+	String showPayment() {
+		System.out.println("15th Page");
+		return "payment";
 	}
 	
 	

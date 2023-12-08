@@ -15,9 +15,9 @@ public class BookingsMapper implements RowMapper<Bookings>{
 		
 		booking.setIdBooking(rs.getInt("BOOKING_ID"));
 		booking.setVisitDate(rs.getDate("VISIT_DATE"));
-		booking.setNumberOfTickets(rs.getInt("NO_OF_TICKETS"));
-		booking.setTotalPrice(rs.getDouble("TOTAL_PRICE"));
-        
+		booking.setTicketPrice(rs.getBigDecimal("TICKET_PRICE"));
+		booking.setNumberTickets(rs.getBigDecimal("NO_OF_TICKETS"));
+		booking.setTotalPrice(rs.getBigDecimal("TOTAL_PRICE"));
         return booking;
 	}
 

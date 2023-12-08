@@ -18,5 +18,9 @@ public class BookingService {
 		return booking;
 	}
 	
-
+	public void createBooking(Bookings booking) {
+		
+		this.bookingsdao.createBooking(booking);
+	}
+	
 }

@@ -35,31 +35,35 @@
     <div class="form-group">
       <label for="visitDate">Date Of Visit:</label>
       <input type="date" class="form-control"  th:field="*{visitDate}" required>
+    </div>
     <div class="form-group">
 	  <label for="ticketPrice">Monuments List:</label>
-	  <select class="form-control" th:field="*{ticketPrice}" required>
-		<option value="" selected>Select</option>
-		<option value="100">Taj Mahal</option>
-		<option value="80">Agra Fort</option>
-		<option value="70">Fatehpur Sikhri</option>
-		<option value="60">Itimad-ud-daula</option>
-		<option value="50">Tomb Of Akbar</option>
-	  </select>
+		  <select class="form-control" th:field="*{ticketPrice}" required>
+			<option value="" selected>Select</option>
+			<option value="100">Taj Mahal</option>
+			<option value="80">Agra Fort</option>
+			<option value="70">Fatehpur Sikhri</option>
+			<option value="60">Itimad-ud-daula</option>
+			<option value="50">Tomb Of Akbar</option>
+		  </select>
 	</div>
+	 <div>
 	  <label for="numberTickets">Number Of Tickets:</label>
       <input type="text" class="form-control" th:field="*{numberTickets}" required>
+	 </div>
     <br>
     <div>
    	  <label for="totalPrice">Total Price</label>
       <input type="text" class="form-control" th:field="*{totalPrice}" readonly>
-      </div>
+     </div>
     <br>
       <button type="submit" class="btn btn-primary">
 		  Calculate Total Price</button> 
-		
-		
-	
+	<br>	
+	<div class="text-center">
+		<p><a href="http://localhost:8080/payment">Proceed To Pay</a></p>
 	</div>
+	   
   </form>
   
 </div>

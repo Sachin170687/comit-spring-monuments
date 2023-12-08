@@ -14,7 +14,7 @@ public class Bookings {
     BigDecimal ticketPrice;
     BigDecimal numberTickets;
     BigDecimal totalPrice;
-    String email;
+    
     
 	public int getIdBooking() {
 		return idBooking;
@@ -46,20 +46,13 @@ public class Bookings {
 	public void setTotalPrice(BigDecimal totalPrice) {
 		this.totalPrice = totalPrice;
 	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
 	@Override
 	public String toString() {
-		return String.format(
-				"Bookings [idBooking=%s, visitDate=%s, ticketPrice=%s, numberTickets=%s, totalPrice=%s, email=%s]",
-				idBooking, visitDate, ticketPrice, numberTickets, totalPrice, email);
+		return String.format("Bookings [idBooking=%s, visitDate=%s, ticketPrice=%s, numberTickets=%s, totalPrice=%s]",
+				idBooking, visitDate, ticketPrice, numberTickets, totalPrice);
 	}
- 
     
+       
     
 }
     

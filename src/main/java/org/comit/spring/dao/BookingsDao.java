@@ -17,4 +17,13 @@ public class BookingsDao {
 		String sql="SELECT * FROM BOOKINGS";
 	    return this.jdbctemplate.query(sql,new BookingsMapper());
 	}
+	
+	public void createBooking(Bookings booking) {
+		String sql="INSERT INTO BOOKINGS (VISIT_DATE,TICKET_PRICE,NO_OF_TICKETS,TOTAL_PRICE)" 
+				    + "VALUES (?,?,?,?)";
+		this.jdbctemplate.update(sql,booking.getVisitDate(),booking.getTicketPrice(),
+				booking.getNumberTickets(),booking.getTotalPrice());			
+	}
+	
+	
 }
